@@ -27,3 +27,15 @@
 
 #### 5. Validate in console.
 Check if users are created with respecive policies in https://console.aws.amazon.com/iamv2/home#/users
+
+
+
+
+##### MFA
+```
+
+module "aws-enforce-mfa" {
+  source = "jeromegamez/enforce-mfa/aws"
+  users  = var.userlist.value["name"]
+}
+```
