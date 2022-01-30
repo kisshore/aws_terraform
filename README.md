@@ -32,6 +32,8 @@ Check if users are created with respecive policies in https://console.aws.amazon
 
 
 ##### MFA
+https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_examples_aws_my-sec-creds-self-manage.html
+or
 ```
 
 module "aws-enforce-mfa" {
