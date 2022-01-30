@@ -20,6 +20,8 @@ resource "aws_iam_access_key" "user" {
   depends_on = [time_sleep.wait_30_seconds]
 }
 
+# As of today, terraform allowing AWS IAM User passwords as pgpkeys only, so there is neccessary of creation an account in https://keybase.io/ & then specify the user in pgp_key field.
+# Without keybase account this resource fail to create.
 resource "aws_iam_user_login_profile" "user" {
   for_each = var.userlist
   user = each.value["name"]
