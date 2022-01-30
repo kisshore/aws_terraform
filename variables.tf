@@ -2,16 +2,16 @@ variable "userlist" {
     type = map(any)
     default = {
         admin = {
-            name = "greenadmin"
+            name = "henry"
             role = "admin"
         }
         engineer = {
-            name = "greenengineer"
+            name = "charile"
             role = "ec2_full"
             region = "us-east-1"
         }
         accountant = {
-            name = "greenaccountant"
+            name = "jennifer"
             role = "readonly"
         }
     }
