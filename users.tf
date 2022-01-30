@@ -4,6 +4,10 @@ resource "aws_iam_user" "user" {
   path = "/"
   force_destroy = true
 }
+
+# User creation might take 2+ seconds, So creating a dummy a resource to hold execution for 30seconds.
+# Without this resource other resources creation might fail with 404 errors.
+
 resource "time_sleep" "wait_30_seconds" {
   for_each = var.userlist
   create_duration = "30s"
